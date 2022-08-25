@@ -1,0 +1,60 @@
+<div class="container">
+  <div class="section">
+    <form [formGroup]="formGroupSunat" (ngSubmit)="submitData()">
+      <div class="form-section1">
+        <h1>Cliente</h1>
+        <button>Guardar</button>
+      </div>
+      <div class="form-section">
+        <div class="form-group-small">
+          <label for="tipo">Tipo</label>
+          <select name="tipo" id="tipo" formControlName="tipo">
+            <option value="DNI">DNI</option>
+            <option value="RUC">RUC</option>
+          </select>
+        </div>
+        <div class="form-group-small">
+          <label for="documento">Numero de documento</label>
+          <input name="documento" formControlName="documento" type="text" />
+        </div>
+        <div class="form-group-small">
+          <button>Buscar en sunat</button>
+        </div>
+      </div>
+      <div class="form-section">
+        <div class="form-group">
+          <label for="nombre">Nombres y Apellidos</label>
+          <input type="text" name="nombre" formControlName="nombre" />
+        </div>
+        <div class="form-group">
+          <label for="alias">Mostrar Nombre Como (Alias)</label>
+          <input type="text" name="alias" formControlName="alias" />
+        </div>
+      </div>
+      <div class="form-section">
+        <div class="form-group">
+          <label for="direccion">Direccion</label>
+          <input type="text" name="direccion" formControlName="direccion" />
+        </div>
+        <div class="form-group">
+          <label for="ubigeo">Ubigeo (Distrito)</label>
+          <input type="text" name="ubigeo" formControlName="ubigeo" />
+        </div>
+      </div>
+      <div class="form-section">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" name="email" formControlName="email" />
+        </div>
+        <div class="form-group-small">
+          <label for="movil">Telefono Móvil</label>
+          <input type="text" name="movil" formControlName="movil" />
+        </div>
+        <div class="form-group-small">
+          <label for="fijo">Telefono Fíjo)</label>
+          <input type="text" formControlName="fijo" name="fijo" />
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
